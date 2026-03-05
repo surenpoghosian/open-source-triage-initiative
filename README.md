@@ -1,1 +1,1 @@
-# open-source-triage-initiative
+# Open Source Triage Initiative
