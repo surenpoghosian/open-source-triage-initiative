@@ -2,7 +2,10 @@
 
 A student-led program at the American University of Armenia contributing to open source software by triaging issues in [NumPy](https://github.com/numpy/numpy) and [pandas](https://github.com/pandas-dev/pandas).
 
----
+## How to Join
+
+Open to AUA students. Submit your name and AUA email at [research.am](https://research.am).
+
 
 ## Charts
 
@@ -26,7 +29,6 @@ xychart-beta
     line [0]
 ```
 
----
 
 ## Stats
 
@@ -37,7 +39,6 @@ xychart-beta
 | Projects covered | NumPy, pandas |
 | Started | March 2026 |
 
----
 
 ## Members
 
@@ -52,12 +53,4 @@ Joined: Mar 2026 · Issues triaged: 0
 |---|---|---|---|---|
 | [numpy#1](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes | numpy | Mar 2026 | duplicate |
 
-## How to Join
 
-Open to AUA students. Submit your name and AUA email at [research.am](https://research.am).
-
----
-
-## Contact
-
-suren_poghosyan@edu.aua.am
