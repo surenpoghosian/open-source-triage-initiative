@@ -8,14 +8,14 @@ monthly = data["monthly"]
 members = data["members"]
 
 months = [e["month"] for e in monthly]
-issues = [e["issues_triaged"] for e in monthly]
+monthly_issues = [e["issues_triaged"] for e in monthly]
 member_counts = [e["members"] for e in monthly]
 
-max_issues = max(issues + [10])
+max_issues = max(monthly_issues + [10])
 max_members = max(member_counts + [5])
 
 months_str = ", ".join(months)
-issues_str = ", ".join(str(v) for v in issues)
+issues_str = ", ".join(str(v) for v in monthly_issues)
 members_str = ", ".join(str(v) for v in member_counts)
 
 issues_chart = f"""```mermaid
