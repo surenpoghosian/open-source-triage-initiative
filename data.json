@@ -8,10 +8,21 @@
   ],
   "members": [
     {
-      "name": "Suren_Poghosyan",
+      "name": "Suren Poghosyan",
       "github": "surenpoghosian",
       "joined": "Mar 2026",
       "issues_triaged": 0
+    }
+  ],
+"issues": [
+    {
+      "id": "numpy#27123",
+      "url": "https://github.com/numpy/numpy/issues/27123",
+      "title": "test sample",
+      "project": "numpy",
+      "date": "Mar 2026",
+      "triaged_by": "surenpoghosian",
+      "outcome": "duplicate"
     }
   ]
 }
