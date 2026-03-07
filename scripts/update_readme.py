@@ -6,6 +6,7 @@ with open("data.json") as f:
 
 monthly = data["monthly"]
 members = data["members"]
+triaged_issues = data.get("issues", [])
 
 months = [e["month"] for e in monthly]
 monthly_issues = [e["issues_triaged"] for e in monthly]
@@ -43,7 +44,7 @@ summary_table = f"| Name | GitHub | Issues Triaged |\n|---|---|---|\n{summary_ro
 members_detail = ""
 for m in members:
     github = m["github"]
-    member_issues = [i for i in issues if i["triaged_by"] == github]
+    member_issues = [i for i in triaged_issues if i["triaged_by"] == github]
     rows = "\n".join(
         f"| [{i['id']}]({i['url']}) | {i['title']} | {i['project']} | {i['date']} | {i['outcome']} |"
         for i in member_issues
