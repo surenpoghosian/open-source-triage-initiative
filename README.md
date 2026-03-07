@@ -4,7 +4,7 @@ A student-led program at the American University of Armenia contributing to open
 
 ## How to Join
 
-Open to AUA students. Submit your name and AUA email at [research.am](https://research.am).
+Open to AUA students. Submit your name and email at [triage.research.am](https://triage.research.am)
 
 
 ## Charts
