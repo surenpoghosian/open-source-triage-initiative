@@ -18,7 +18,7 @@
     {
       "id": "numpy#27123",
       "url": "https://github.com/numpy/numpy/issues/27123",
-      "title": "test sample",
+      "title": "test_sample",
       "project": "numpy",
       "date": "Mar 2026",
       "triaged_by": "surenpoghosian",
