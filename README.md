@@ -12,7 +12,7 @@ Issues triaged over time:
 xychart-beta
     title "Issues Triaged"
     x-axis [Mar 2026]
-    y-axis 0 --> 50
+    y-axis 0 --> 15
     line [0]
 ```
 
@@ -22,7 +22,7 @@ Total members over time:
 xychart-beta
     title "Members"
     x-axis [Mar 2026]
-    y-axis 0 --> 20
+    y-axis 0 --> 10
     line [0]
 ```
 
@@ -43,10 +43,14 @@ xychart-beta
 
 | Name | GitHub | Issues Triaged |
 |---|---|---|
-| — | — | — |
+| Suren Poghosyan | [surenpoghosian](https://github.com/surenpoghosian) | 0 |
 
+### [Suren Poghosyan](https://github.com/surenpoghosian)
+Joined: Mar 2026 · Issues triaged: 0
 
----
+| Issue | Title | Project | Date | Outcome |
+|---|---|---|---|---|
+| [numpy#27123](https://github.com/numpy/numpy/issues/27123) | test_sample | numpy | Mar 2026 | duplicate |
 
 ## How to Join
 
