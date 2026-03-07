@@ -1,6 +1,6 @@
 # Open Source Triage Initiative
 
-A student-led program at the American University of Armenia contributing to open source software by triaging issues in [NumPy](https://github.com/numpy/numpy) and [pandas](https://github.com/pandas-dev/pandas). Non-funded. Volunteer participation only.
+A student-led program at the American University of Armenia contributing to open source software by triaging issues in [NumPy](https://github.com/numpy/numpy) and [pandas](https://github.com/pandas-dev/pandas).
 
 ---
 
@@ -12,7 +12,7 @@ Issues triaged over time:
 xychart-beta
     title "Issues Triaged"
     x-axis [Mar 2026]
-    y-axis 0 --> 15
+    y-axis 0 --> 50
     line [0]
 ```
 
@@ -22,7 +22,7 @@ Total members over time:
 xychart-beta
     title "Members"
     x-axis [Mar 2026]
-    y-axis 0 --> 10
+    y-axis 0 --> 20
     line [0]
 ```
 
@@ -43,7 +43,8 @@ xychart-beta
 
 | Name | GitHub | Issues Triaged |
 |---|---|---|
-| Suren_Poghosyan | [surenpoghosian](https://github.com/surenpoghosian) | 0 |
+| — | — | — |
+
 
 ---
 
@@ -55,4 +56,4 @@ Open to AUA students. Submit your name and AUA email at [research.am](https://re
 
 ## Contact
 
-suren_poghosyan+oss@edu.aua.am
+suren_poghosyan@edu.aua.am
