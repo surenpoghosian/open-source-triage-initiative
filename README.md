@@ -50,7 +50,7 @@ Joined: Mar 2026 · Issues triaged: 0
 
 | Issue | Title | Project | Date | Outcome |
 |---|---|---|---|---|
-| [numpy#27123](https://github.com/numpy/numpy/issues/27123) | test_sample | numpy | Mar 2026 | duplicate |
+| [numpy#1](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes | numpy | Mar 2026 | duplicate |
 
 ## How to Join
 
