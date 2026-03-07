@@ -12,7 +12,7 @@ Issues triaged over time:
 xychart-beta
     title "Issues Triaged"
     x-axis [Mar 2026]
-    y-axis 0 --> 50
+    y-axis 0 --> 15
     line [0]
 ```
 
@@ -22,7 +22,7 @@ Total members over time:
 xychart-beta
     title "Members"
     x-axis [Mar 2026]
-    y-axis 0 --> 20
+    y-axis 0 --> 10
     line [0]
 ```
 
@@ -43,7 +43,7 @@ xychart-beta
 
 | Name | GitHub | Issues Triaged |
 |---|---|---|
-| — | — | — |
+| Suren_Poghosyan | [surenpoghosian](https://github.com/surenpoghosian) | 0 |
 
 ---
 
