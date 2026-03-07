@@ -54,3 +54,8 @@ Joined: Mar 2026 · Issues triaged: 0
 | [numpy#1](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes | numpy | Mar 2026 | duplicate |
 
 
+## Links
+
+- [research.am](https://research.am)
+- [NumPy](https://github.com/numpy/numpy)
+- [pandas](https://github.com/pandas-dev/pandas)
