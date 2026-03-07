@@ -34,11 +34,24 @@ xychart-beta
     line [{members_str}]
 ```"""
 
-rows = "\n".join(
+summary_rows = "\n".join(
     f"| {m['name']} | [{m['github']}](https://github.com/{m['github']}) | {m['issues_triaged']} |"
     for m in members
 )
-members_table = f"| Name | GitHub | Issues Triaged |\n|---|---|---|\n{rows}"
+summary_table = f"| Name | GitHub | Issues Triaged |\n|---|---|---|\n{summary_rows if summary_rows else '| — | — | — |'}"
+
+members_detail = ""
+for m in members:
+    github = m["github"]
+    member_issues = [i for i in issues if i["triaged_by"] == github]
+    rows = "\n".join(
+        f"| [{i['id']}]({i['url']}) | {i['title']} | {i['project']} | {i['date']} | {i['outcome']} |"
+        for i in member_issues
+    )
+    table = f"| Issue | Title | Project | Date | Outcome |\n|---|---|---|---|---|\n{rows if rows else '| — | — | — | — | — |'}"
+    members_detail += f"### [{m['name']}](https://github.com/{github})\nJoined: {m['joined']} · Issues triaged: {m['issues_triaged']}\n\n{table}\n\n"
+
+members_block = f"{summary_table}\n\n{members_detail.strip()}"
 
 with open("README.md") as f:
     readme = f.read()
@@ -54,8 +67,8 @@ readme = re.sub(
     readme, flags=re.DOTALL
 )
 readme = re.sub(
-    r'\| Name \| GitHub \| Issues Triaged \|.*?(?=\n---|\Z)',
-    members_table + "\n",
+    r'(## Members\n\n).*?(\n## )',
+    lambda m: m.group(1) + members_block + "\n\n" + m.group(2).lstrip("\n"),
     readme, flags=re.DOTALL
 )
 
