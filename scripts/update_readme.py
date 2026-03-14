@@ -37,10 +37,6 @@ for m in months:
 
 member_counts = cumulative_members
 
-if len(months) == 1:
-    months = [""] + months
-    monthly_issues = [0] + monthly_issues
-    member_counts = [0] + member_counts
 
 max_issues = max(monthly_issues + [10])
 max_members = max(member_counts + [5])
@@ -56,7 +52,7 @@ xychart-beta
     title "Issues Triaged"
     x-axis [{months_str}]
     y-axis 0 --> {max_issues + 5}
-    line [{issues_str}]
+    bar [{issues_str}]
 ```"""
 
 members_chart = f"""```mermaid
@@ -64,7 +60,7 @@ xychart-beta
     title "Members"
     x-axis [{months_str}]
     y-axis 0 --> {max_members + 5}
-    line [{members_str}]
+    bar [{members_str}]
 ```"""
 
 def member_issue_count(github):
