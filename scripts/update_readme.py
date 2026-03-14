@@ -44,14 +44,26 @@ active_members = len(members)
 import urllib.parse
 
 def quickchart_url(title, labels, values):
+    max_val = max(values + [1])
     chart = {
-        "type": "bar",
+        "type": "line",
         "data": {
             "labels": labels,
-            "datasets": [{"label": title, "data": values}]
+            "datasets": [{
+                "label": title,
+                "data": values,
+                "fill": False,
+                "tension": 0.3
+            }]
         },
         "options": {
-            "scales": {"y": {"beginAtZero": True}},
+            "scales": {
+                "y": {
+                    "beginAtZero": True,
+                    "ticks": {"stepSize": 1},
+                    "max": max_val + 1
+                }
+            },
             "plugins": {"legend": {"display": False}}
         }
     }
