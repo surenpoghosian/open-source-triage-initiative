@@ -60,7 +60,10 @@ def quickchart_url(title, labels, values):
             "scales": {
                 "y": {
                     "beginAtZero": True,
-                    "ticks": {"stepSize": 1},
+                    "ticks": {
+                        "stepSize": 1,
+                        "precision": 0
+                    },
                     "max": max_val + 1
                 }
             },
