@@ -1,8 +1,9 @@
 # NOTIFICATION: THE AUTHOR USED ARTIFICIAL INTELLIGENCE FOR THE GENERATION OF THE SCRIPT BELOW
 # IT SERVES AS A NICE WAY TO REPRESENT THE DATA AND THE RESULTS OF CONTRIBUTIONS
-# THERE IS NO INTENT OF PERSONIFICATION OF A SYNTHETICALLY INITIATED PIECE OF SOFTWARE 
+# THERE IS NO INTENT OF PERSONIFICATION OF A SYNTHETICALLY INITIATED PIECE OF SOFTWARE
 import json
 import re
+from collections import defaultdict
 
 with open("data.json") as f:
     data = json.load(f)
@@ -11,7 +12,6 @@ members = data["members"]
 triaged_issues = data.get("issues", [])
 projects = data.get("projects", [])
 
-from collections import defaultdict
 issues_by_month = defaultdict(int)
 for i in triaged_issues:
     issues_by_month[i["date"]] += 1
@@ -28,6 +28,7 @@ for mo in sorted(all_months_set):
 
 months = monthly_order
 monthly_issues = [issues_by_month.get(m, 0) for m in months]
+
 cumulative_members = []
 running = 0
 for m in months:
@@ -35,10 +36,8 @@ for m in months:
     cumulative_members.append(running)
 
 member_counts = cumulative_members
-
 max_issues = max(monthly_issues + [10])
 max_members = max(member_counts + [5])
-
 total_issues_triaged = len(triaged_issues)
 active_members = len(members)
 
@@ -62,8 +61,11 @@ xychart-beta
     line [{members_str}]
 ```"""
 
+def member_issue_count(github):
+    return len([i for i in triaged_issues if i["triaged_by"] == github])
+
 summary_rows = "\n".join(
-    f"| {m['name']} | [{m['github']}](https://github.com/{m['github']}) | {m['issues_triaged']} |"
+    f"| {m['name']} | [{m['github']}](https://github.com/{m['github']}) | {member_issue_count(m['github'])} |"
     for m in members
 )
 summary_table = f"| Name | GitHub | Issues Triaged |\n|---|---|---|\n{summary_rows if summary_rows else '| — | — | — |'}"
@@ -72,22 +74,21 @@ members_detail = ""
 for m in members:
     github = m["github"]
     member_issues = [i for i in triaged_issues if i["triaged_by"] == github]
+    count = member_issue_count(github)
     rows = "\n".join(
         f"| [{i['id']}]({i['url']}) | {i['title']} | {i['project']} | {i['date']} | {i['outcome']} |"
         for i in member_issues
     )
     table = f"| Issue | Title | Project | Date | Outcome |\n|---|---|---|---|---|\n{rows if rows else '| — | — | — | — | — |'}"
-    members_detail += f"### [{m['name']}](https://github.com/{github})\nJoined: {m['joined']} · Issues triaged: {m['issues_triaged']}\n\n{table}\n\n"
+    members_detail += f"### [{m['name']}](https://github.com/{github})\nJoined: {m['joined']} · Issues triaged: {count}\n\n{table}\n\n"
 
 members_block = f"{summary_table}\n\n{members_detail.strip()}"
 
-# Build links section dynamically from projects
 links_lines = ["- [research.am](https://research.am)"] + [
     f"- [{p['name']}]({p['url']})" for p in projects
 ]
 links_block = "\n".join(links_lines)
 
-# Build projects covered string for Stats table
 projects_covered = ", ".join(p["name"] for p in projects) if projects else "—"
 
 with open("README.md") as f:
