@@ -10,6 +10,7 @@ with open("data.json") as f:
 monthly = data["monthly"]
 members = data["members"]
 triaged_issues = data.get("issues", [])
+projects = data.get("projects", [])
 
 months = [e["month"] for e in monthly]
 monthly_issues = [e["issues_triaged"] for e in monthly]
@@ -57,6 +58,15 @@ for m in members:
 
 members_block = f"{summary_table}\n\n{members_detail.strip()}"
 
+
+links_lines = ["- [research.am](https://research.am)"] + [
+    f"- [{p['name']}]({p['url']})" for p in projects
+]
+links_block = "\n".join(links_lines)
+
+
+projects_covered = ", ".join(p["name"] for p in projects) if projects else "—"
+
 with open("README.md") as f:
     readme = f.read()
 
@@ -71,12 +81,22 @@ readme = re.sub(
     readme, flags=re.DOTALL
 )
 readme = re.sub(
+    r'\| Projects covered \|.*?\|',
+    f'| Projects covered | {projects_covered} |',
+    readme
+)
+readme = re.sub(
     r'(## Members\n\n).*?(\n## )',
     lambda m: m.group(1) + members_block + "\n\n" + m.group(2).lstrip("\n"),
+    readme, flags=re.DOTALL
+)
+readme = re.sub(
+    r'(## Links\n).*',
+    f'## Links\n{links_block}',
     readme, flags=re.DOTALL
 )
 
 with open("README.md", "w") as f:
     f.write(readme)
 
-print("README.md updated.")
+print("README.md updated."
