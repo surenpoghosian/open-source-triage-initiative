@@ -30,8 +30,8 @@ xychart-beta
 
 | Metric | Value |
 |---|---|
-| Issues triaged | 1 |
-| Active members | 1 |
+| Issues triaged | 2 |
+| Active members | 2 |
 | Projects covered | NumPy, pandas, Elasticsearch, OpenSearch, Spring Framework, Jenkins |
 | Started | March 2026 |
 
@@ -40,6 +40,7 @@ xychart-beta
 | Name | GitHub | Issues Triaged |
 |---|---|---|
 | Suren Poghosyan | [surenpoghosian](https://github.com/surenpoghosian) | 1 |
+| user | [dummyusername](https://github.com/dummyusername) | 1 |
 
 ### [Suren Poghosyan](https://github.com/surenpoghosian)
 Joined: Mar 2026 · Issues triaged: 1
@@ -47,6 +48,13 @@ Joined: Mar 2026 · Issues triaged: 1
 | Issue | Title | Project | Date | Outcome |
 |---|---|---|---|---|
 | [numpy#1](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes. | numpy | Mar 2026 | duplicate |
+
+### [user](https://github.com/dummyusername)
+Joined: Mar 2026 · Issues triaged: 1
+
+| Issue | Title | Project | Date | Outcome |
+|---|---|---|---|---|
+| [numpy#2](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes. | numpy | Mar 2026 | duplicate |
 
 ## Links
 - [research.am](https://research.am)
