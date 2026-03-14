@@ -1,20 +1,15 @@
 {
   "monthly": [
-    {
-      "month": "Mar 2026",
-      "issues_triaged": 0,
-      "members": 1
-    }
+    { "month": "Mar 2026" }
   ],
   "members": [
     {
       "name": "Suren Poghosyan",
       "github": "surenpoghosian",
-      "joined": "Mar 2026",
-      "issues_triaged": 0
+      "joined": "Mar 2026"
     }
   ],
-"issues": [
+  "issues": [
     {
       "id": "numpy#1",
       "url": "https://github.com/numpy/numpy/issues/1",
