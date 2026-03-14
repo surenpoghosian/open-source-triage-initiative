@@ -38,30 +38,28 @@ for m in months:
 member_counts = cumulative_members
 
 
-max_issues = max(monthly_issues + [10])
-max_members = max(member_counts + [5])
 total_issues_triaged = len(triaged_issues)
 active_members = len(members)
 
-months_str = ", ".join(months)
-issues_str = ", ".join(str(v) for v in monthly_issues)
-members_str = ", ".join(str(v) for v in member_counts)
+import urllib.parse
 
-issues_chart = f"""```mermaid
-xychart-beta
-    title "Issues Triaged"
-    x-axis [{months_str}]
-    y-axis 0 --> {max_issues + 5}
-    bar [{issues_str}]
-```"""
+def quickchart_url(title, labels, values):
+    chart = {
+        "type": "bar",
+        "data": {
+            "labels": labels,
+            "datasets": [{"label": title, "data": values}]
+        },
+        "options": {
+            "scales": {"y": {"beginAtZero": True}},
+            "plugins": {"legend": {"display": False}}
+        }
+    }
+    encoded = urllib.parse.quote(json.dumps(chart), safe="")
+    return f"https://quickchart.io/chart?c={encoded}&backgroundColor=white"
 
-members_chart = f"""```mermaid
-xychart-beta
-    title "Members"
-    x-axis [{months_str}]
-    y-axis 0 --> {max_members + 5}
-    bar [{members_str}]
-```"""
+issues_chart = f"![Issues Triaged]({quickchart_url('Issues Triaged', months, monthly_issues)})"
+members_chart = f"![Members]({quickchart_url('Members', months, member_counts)})"
 
 def member_issue_count(github):
     return len([i for i in triaged_issues if i["triaged_by"] == github])
@@ -97,12 +95,12 @@ with open("README.md") as f:
     readme = f.read()
 
 readme = re.sub(
-    r'Issues triaged over time:\n\n```mermaid.*?```',
+    r'Issues triaged over time:\n\n!\[.*?\]\(.*?\)',
     f'Issues triaged over time:\n\n{issues_chart}',
     readme, flags=re.DOTALL
 )
 readme = re.sub(
-    r'Total members over time:\n\n```mermaid.*?```',
+    r'Total members over time:\n\n!\[.*?\]\(.*?\)',
     f'Total members over time:\n\n{members_chart}',
     readme, flags=re.DOTALL
 )
