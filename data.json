@@ -24,5 +24,13 @@
       "triaged_by": "surenpoghosian",
       "outcome": "duplicate"
     }
+  ],
+  "projects": [
+    { "name": "NumPy", "url": "https://github.com/numpy/numpy" },
+    { "name": "pandas", "url": "https://github.com/pandas-dev/pandas" },
+    { "name": "Elasticsearch", "url": "https://github.com/elastic/elasticsearch" },
+    { "name": "OpenSearch", "url": "https://github.com/opensearch-project/opensearch" },
+    { "name": "Spring Framework", "url": "https://github.com/spring-projects/spring-framework" },
+    { "name": "Jenkins", "url": "https://github.com/jenkinsci/jenkins" }
   ]
 }
