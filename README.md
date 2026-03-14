@@ -32,7 +32,7 @@ xychart-beta
 |---|---|
 | Issues triaged | — |
 | Active members | — |
-| Projects covered | — |
+| Projects covered | NumPy, pandas, Elasticsearch, OpenSearch, Spring Framework, Jenkins |
 | Started | March 2026 |
 
 ## Members
@@ -50,3 +50,9 @@ Joined: Mar 2026 · Issues triaged: 0
 
 ## Links
 - [research.am](https://research.am)
+- [NumPy](https://github.com/numpy/numpy)
+- [pandas](https://github.com/pandas-dev/pandas)
+- [Elasticsearch](https://github.com/elastic/elasticsearch)
+- [OpenSearch](https://github.com/opensearch-project/opensearch)
+- [Spring Framework](https://github.com/spring-projects/spring-framework)
+- [Jenkins](https://github.com/jenkinsci/jenkins)
