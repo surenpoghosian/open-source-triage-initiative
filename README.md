@@ -47,14 +47,14 @@ Joined: Mar 2026 · Issues triaged: 1
 
 | Issue | Title | Project | Date | Outcome |
 |---|---|---|---|---|
-| [numpy#1](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes | numpy | Mar 2026 | duplicate |
+| [numpy#1](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes. | numpy | Mar 2026 | duplicate |
 
 ### [user](https://github.com/dummyusername)
 Joined: Mar 2026 · Issues triaged: 1
 
 | Issue | Title | Project | Date | Outcome |
 |---|---|---|---|---|
-| [numpy#2](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes | numpy | Mar 2026 | duplicate |
+| [numpy#2](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes. | numpy | Mar 2026 | duplicate |
 
 ## Links
 - [research.am](https://research.am)
