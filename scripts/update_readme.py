@@ -36,6 +36,12 @@ for m in months:
     cumulative_members.append(running)
 
 member_counts = cumulative_members
+
+if len(months) == 1:
+    months = [""] + months
+    monthly_issues = [0] + monthly_issues
+    member_counts = [0] + member_counts
+
 max_issues = max(monthly_issues + [10])
 max_members = max(member_counts + [5])
 total_issues_triaged = len(triaged_issues)
