@@ -99,4 +99,4 @@ readme = re.sub(
 with open("README.md", "w") as f:
     f.write(readme)
 
-print("README.md updated."
+print("README.md updated.")
