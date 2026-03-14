@@ -63,7 +63,9 @@ def quickchart_url(title, labels, values):
                     "min": 0,
                     "max": max_val + 1,
                     "ticks": {
-                        "callback": "function(v) { return Number.isInteger(v) ? v : null; }"
+                        "stepSize": 1,
+                        "suggestedMin": 0,
+                        "suggestedMax": max_val + 1
                     }
                 }
             },
@@ -71,7 +73,7 @@ def quickchart_url(title, labels, values):
         }
     }
     encoded = urllib.parse.quote(json.dumps(chart), safe="")
-    return f"https://quickchart.io/chart?c={encoded}&backgroundColor=white"
+    return f"https://quickchart.io/chart?c={encoded}&backgroundColor=white&version=2"
 
 issues_chart = f"![Issues Triaged]({quickchart_url('Issues Triaged', months, monthly_issues)})"
 members_chart = f"![Members]({quickchart_url('Members', months, member_counts)})"
