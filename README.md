@@ -10,12 +10,12 @@ Open to AUA students. Submit your name and email at [triage.research.am](https:/
 
 Issues triaged over time:
 
-![Issues Triaged]()
+![Issues Triaged](https://quickchart.io/chart?c=%7B%22type%22%3A%20%22bar%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22Mar%202026%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22label%22%3A%20%22Issues%20Triaged%22%2C%20%22data%22%3A%20%5B2%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22scales%22%3A%20%7B%22y%22%3A%20%7B%22beginAtZero%22%3A%20true%7D%7D%2C%20%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22display%22%3A%20false%7D%7D%7D%7D&backgroundColor=white)
 
 
 Total members over time:
 
-![Members]()
+![Members](https://quickchart.io/chart?c=%7B%22type%22%3A%20%22bar%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22Mar%202026%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22label%22%3A%20%22Members%22%2C%20%22data%22%3A%20%5B2%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22scales%22%3A%20%7B%22y%22%3A%20%7B%22beginAtZero%22%3A%20true%7D%7D%2C%20%22plugins%22%3A%20%7B%22legend%22%3A%20%7B%22display%22%3A%20false%7D%7D%7D%7D&backgroundColor=white)
 
 
 ## Stats
@@ -39,7 +39,7 @@ Joined: Mar 2026 · Issues triaged: 1
 
 | Issue | Title | Project | Date | Outcome |
 |---|---|---|---|---|
-| [numpy#1](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes. | numpy | Mar 2026 | duplicate |
+| [numpy#1](https://github.com/numpy/numpy/issues/1) | Dummy issue for display purposes | numpy | Mar 2026 | duplicate |
 
 ### [user](https://github.com/dummyusername)
 Joined: Mar 2026 · Issues triaged: 1
